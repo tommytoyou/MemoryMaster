@@ -1,3 +1,14 @@
+
+let button = document.querySelector('button');
+let shuffleAndReview = deck.shuffle {
+  
+}
+button.addEventListener("click", ShuffleAndReview())
+
+
+
+
+
 class Card {
     constructor(suit, value) {
       this.suit = suit;
@@ -43,3 +54,21 @@ let deck = new Deck();
 deck.createDeck(suits, values);
 console.log(deck.shuffle());
 console.log(deck.deal());
+
+
+
+
+
+
+// let interval = setInterval(timer,1000)
+// function timer(num) {
+// num -= 1
+// console.log(num)
+// if (num=== 0){
+//   console.log("I am done")
+//    clearInterval(interval)
+// }
+
+
+// } 
+// timer(5)

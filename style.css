@@ -14,7 +14,7 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: center;
-  background-color: grey;
+  background-color: bisque;
   margin: 40px 40px;
   }
   
@@ -29,6 +29,16 @@ h1 {
      margin: 10px 50px;
   }
   button {
-  background-color: yellow;
+  background-color: rgb(0, 153, 255);
   }
   
+  
+  footer { 
+    position: fixed; 
+    padding: 10px 10px 0px 10px; 
+    bottom: 0; 
+    width: 100%; 
+    /* Height of the footer*/  
+    height: 40px; 
+    background: grey; 
+} 
