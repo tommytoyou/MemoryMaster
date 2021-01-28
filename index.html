@@ -3,35 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  
+  <script defer src= "./app.js"></script>
   <link  rel='stylesheet' href='./style.css' />
   <title>MemoryMaster™</title>
 </head>
 <body>
   <h1> MemoryMaster™ </h1>
   <div class = "container">
-    <div class = "parent">
+    <div class = "parentLeft">
       
-      <img src= "assets/playing-cards-back.png"alt="Playing Card back" width="120" height="200">
+      <img class = "parentLeftImage" src = "assets/playing-cards-back.png"alt="Playing Card back" width="130" height="200">
       
     </div>
-    <div class = "parent">
+    <div class = "parentRight">
       <p> </p>
-      <img src= "assets/playing-cards-back.png"alt="Playing Card back" width="120" height="200">
+      <img class = "parentRightImage" src = "assets/playing-cards-back.png"alt="Playing Card back" width="130" height="200">
         
     </div>
-    <div class = "parent">
-      <p> Selection </p>
-      <div class = suit-container> </div>
+    <div class = "suits">
+     
+      <div class = 'suit-container'> </div>
     </div>
  </div>
- <button onclick="ShuffleAndReview()"> Shuffle & Review</button>
+ <button id= "shuffleButton"> Shuffle & Review</button>
  <h3>Playing MemoryMaster™</h3>
- <p>
-   1. Click "Shuffle & Review"</p>
+  <p>
+   <p>1. Click "Shuffle & Review"</p>
    <p>2. Memorize the cards as they flip through the review.</p>
    <p>3. Choose the correct card for the next play.</p>
    <p>4. Work at it until you can remember the whole deck.</p>
+  </p>
    <p>Bon Chance!</p>
  
    <footer> All Right Reserved MemoryMaster™ a PEPlabs product 2021</footer>
