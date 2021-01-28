@@ -1,4 +1,3 @@
-
 let button = document.getElementById('shuffleButton');
 //let shuffleAndReview = () =>  {
   // console.log(deck.shuffle())
@@ -7,9 +6,11 @@ let button = document.getElementById('shuffleButton');
 //}
 
 //for (let i = 0; i <= .length; i++)
-button.addEventListener("click", flipCards)
+// button.addEventListener("click", flipCards)
 
-
+button.addEventListener("click", () => {
+  flipCards(mydeck)
+})
 
 
 class Card {
@@ -64,22 +65,26 @@ let mydeck = deck.shuffle();
 
 //for (let i = 0; i < values.length; i++)
 // * 2 *  add a timer for display of card sequence 500 / card 
-function flipCards(e, mydeck){
-  let i = 0; 
-  while(i < mydeck.length){
-    // show card at mydeck[i]
-    let interval = setInterval(timer,500)
-    function timer(num) {
-      let element = document.querySelector(`.${divD.className}`);
-      let style = getComputedStyle(element);
-      let backgroundImage = style.backgroundImage;
-      let parentRightImage = document.querySelector('.parentLeftImage');
-      
-    } i++;
-  }
+
+function flipCards(mydeck){
+    let intervalTracker = null
+    let cardIndex = 0
+    let leftCard = document.querySelector(".parentLeftImage")
+    intervalTracker = setInterval(() =>{
+      if (cardIndex === mydeck.length) {
+        leftCard.setAttribute("src", "assets/playing-cards-back.png")
+        console.log('stop')
+        clearInterval(intervalTracker)
+      }else {
+        console.log(cardIndex)
+       leftCard.setAttribute("src", `assets/${mydeck[cardIndex].value}D.png`)
+
+        console.log("keep incrementing")
+        cardIndex++
+      }
+    },500)
 }
-
-
+console.log(mydeck[0].value)
 // let interval = setInterval(timer,500)
 // function timer(num) {
 //   for (let i = 0; i < mydeck.length; i++)
@@ -108,7 +113,9 @@ function flipCards(e, mydeck){
     // onclick() behavior for rightCard
 
     //let cardCount = 0
+///------------------
 
+//--------------------
     divD.onclick = function pickCard() {
       //1.)store class of div 
       //alert(divD.classList);
@@ -129,48 +136,3 @@ function flipCards(e, mydeck){
     }
     document.querySelector('.suit-container').append(divD);
   }
-
-//---------------
-
-//Target divD and place it within parentLeft div when shuffling
-
-//Target suit-container class and remove the shuffle and leave static
-
-//3 function  1 CLICKING 1 appearingRIGHTparent 1 flipping leftpRENTR
-
-
-
-
-
-
-
-
-
-
-//--------------
-//cardSelected()
-// * 4 * when card 'click' - run function check
-// if(cardSelected === true) {
-//                 = 
-
-// } else if(cardSelected === false){
-//                  =
-
-// }
-
-// }
-// function eventHandler(event) {
-//   if (event.type == 'fullscreenchange') {
-//     /* handle a full screen toggle */
-//   } else /* fullscreenerror */ {
-//     /* handle a full screen toggle error */
-//   }
-// }
-// if card correct go to next choice
-//  else incorrect  - Game Over " The nature of life is impermenance"
-
-// * 5 * Need 2 arrays
-    // one for order selection clicked
- //   let selectionClicked = []
-    // one for order cards shuffled
-    //let mydeckShuffled = []

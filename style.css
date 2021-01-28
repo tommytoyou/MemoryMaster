@@ -83,7 +83,6 @@ h1 {
   
   .container {
     display: flex;
-   
     justify-content: center;
     background-color: bisque;
     margin: 40px 40px;
@@ -117,7 +116,7 @@ h1 {
   }
   .suits {
     align-content: space-around;
-    margin: auto;
+    margin: 10px 50px ;
     border-style: solid;
     height: 200px;
     width: 130px;
