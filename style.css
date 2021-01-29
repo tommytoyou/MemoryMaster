@@ -8,6 +8,98 @@ h1 {
     text-align: center;
     
   }
+
+  .dTwoFlipped {
+    display: block;
+    height: 200;
+    width: 130;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.dThreeFlipped {
+  display: block;
+  height: 200;
+  width: 130;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.dFourFlipped {
+  display: block;
+  height: 200;
+  width: 130;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.dFiveFlipped {
+  display: block;
+  height: 200;
+  width: 130;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.dSixFlipped {
+  display: block;
+  height: 200;
+  width: 130;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden
+}
+.dSevenFlipped {
+  display: block;
+  height: 200;
+  width: 130;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.dEightFlipped {
+  display: block;
+  height: 200;
+  width: 130;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.dNineFlipped {
+  display: block;
+  height: 200;
+  width: 130;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.dTenFlipped {
+  display: block;
+  height: 200;
+  width: 130;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
 .D2 {
   background-image: url("./assets/2D.png");
   background-size: cover;

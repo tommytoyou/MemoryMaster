@@ -7,8 +7,8 @@ let button = document.getElementById('shuffleButton');
 
 // for (let i = 0; i <= .length; i++)
 // button.addEventListener("click", flipCards)
-
 button.addEventListener("click", () => {
+  console.log(mydeck)
   flipCards(mydeck)
 })
 
@@ -57,7 +57,7 @@ let values = [2, 3, 4, 5, 6, 7, 8, 9, 10];
 let deck = new Deck();
 deck.createDeck(suits, values);
 let mydeck = deck.shuffle();
-mydeck.sort()
+
 // this is my array
 
 
@@ -110,11 +110,10 @@ function flipCards(mydeck) {
 // * 3 * Render images in selection area
 //const cardSelected = (mydeck) => {
   mydeck.sort()
-for (let i = 0; i < mydeck.length; i++) {
+for (let i = 2; i < 11; i++) {
   let divD = document.createElement("div");
   console.log(divD)
-  let newId = mydeck[i]
-  divD.classList.add(`D${mydeck[i].value}`)
+  divD.classList.add(`D${i}`)
 
 
   // onclick() behavior for rightCard
@@ -151,9 +150,9 @@ for (let i = 0; i < mydeck.length; i++) {
     // suits.setAttribute("src", `assets/${mydeck[cardIndex].value}D.png`)
     // leftCard behavior
     // cardCount = cardCount + 1
-    cardCount += 1
+    // cardCount += 1
 
-    console.log(mydeck[cardCount].value)
+    // console.log(mydeck[cardCount].value)
 
 
   }
