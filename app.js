@@ -1,12 +1,5 @@
 let button = document.getElementById('shuffleButton');
-//let shuffleAndReview = () =>  {
-// console.log(deck.shuffle())
-// deck.deal();
-// console.log(deck.deck);
-//}
 
-// for (let i = 0; i <= .length; i++)
-// button.addEventListener("click", flipCards)
 button.addEventListener("click", () => {
   console.log(mydeck)
   flipCards(mydeck)
@@ -58,19 +51,11 @@ let deck = new Deck();
 deck.createDeck(suits, values);
 let mydeck = deck.shuffle();
 
-// this is my array
 
-
-
-//* 1 * display card and write a loop for selection
-
-//for (let i = 0; i < values.length; i++)
-// * 2 *  add a timer for display of card sequence 500 / card 
-
+let leftCard = document.querySelector(".parentLeftImage")
 function flipCards(mydeck) {
   let intervalTracker = null
   let cardIndex = 0
-  let leftCard = document.querySelector(".parentLeftImage")
   intervalTracker = setInterval(() => {
     if (cardIndex === mydeck.length) {
       leftCard.setAttribute("src", "assets/playing-cards-back.png")
@@ -79,7 +64,7 @@ function flipCards(mydeck) {
     } else {
       console.log(cardIndex)
       leftCard.setAttribute("src", `assets/${mydeck[cardIndex].value}D.png`)
-      //  suit-container.setattribute("src", `assets/${Deck}D.png`)
+     
       console.log("keep incrementing")
       cardIndex++
     }
@@ -87,74 +72,33 @@ function flipCards(mydeck) {
 }
 
 
-//console.log(mydeck[0].value)
-
-
-// let interval = setInterval(timer,500)
-// function timer(num) {
-//   for (let i = 0; i < mydeck.length; i++)
-// num -= 1
-// console.log(num)
-// if (num=== 0){
-//   console.log("Review Complete")
-//    clearInterval(interval)
-// }
-//for (let i = 0; i < values.length; i++)
-
-// } 
-// timer(9)
-
-// push all images into selection array
-
-
-// * 3 * Render images in selection area
-//const cardSelected = (mydeck) => {
-  mydeck.sort()
+mydeck.sort()
 for (let i = 2; i < 11; i++) {
   let divD = document.createElement("div");
   console.log(divD)
   divD.classList.add(`D${i}`)
 
-
-  // onclick() behavior for rightCard
-
-  //let cardCount = 0
-  ///------------------
-  // let divD
-  // for (let i = 0; i < mydeck.length; i++){
-  //   divD = document.createElement("div");
-  //   console.log(divD)
-  //   let newId = mydeck[i]
-  //   divD.classList.add(`D${mydeck[i].value}`)
-  //   let divClassName
-  //   divD.addEventListener("click", (e) => {
-  //     console.log(e.target.className)
-  //     divClassName = e.target.className
-  //     console.log("Here is divClassName: " + divClassName)
-  //     let rightCard = document.querySelector('.parentRightImage')
-  //     rightCard.setAttribute('src', `assets/${divClassName}D.png`)
-
-  //   })
-  //   document.querySelector('.suit-container').append(divD);
-  // }
-
-  //--------------------
   divD.onclick = function pickCard() {
     mydeck.sort()
     let element = document.querySelector(`.${divD.className}`);
     let style = getComputedStyle(element);
     let backgroundImage = style.backgroundImage;
     let parentRightImage = document.querySelector('.parentRightImage');
-    //let parentRightStyle = getComputedStyle(parentRightImage);
     parentRightImage.src = `.${backgroundImage.slice(60, -2)}`;
-    // suits.setAttribute("src", `assets/${mydeck[cardIndex].value}D.png`)
-    // leftCard behavior
-    // cardCount = cardCount + 1
-    // cardCount += 1
-
-    // console.log(mydeck[cardCount].value)
-
-
+    // Update src of leftCard based on what mydeck[0] is
+    // Then we do an if statement and do this to check that 
+    //the value of the card the user clicked
+    // matches the value of mydeck[0]
+    // if it does were going to call mydeck.shift to remove the first item of my deck
+    // If it is not game over and trigger impermenance statement
+    leftCard.setAttribute("src", `assets/${mydeck[0].value}D.png`)
+    
+    if ( divD.className == `D${mydeck[0].value}`){
+      mydeck.shift()
+    } else if ( divD.className !== `D${mydeck[0].value}`){
+      console.log(divD, `D${mydeck[0].value}`)
+      alert("The meaning of life is impermenance. Please try again")
+    }
   }
   document.querySelector('.suit-container').append(divD);
 }
